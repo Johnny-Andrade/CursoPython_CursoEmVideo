@@ -1,2 +1,2 @@
-dinh = int(input('Digite uma quantia de dólares: $'))
-print('Com ${}, você tem R${} em 13/04/2026'.format(dinh, dinh*4.99))
+dinh = float(input('Digite uma quantia de dólares: US$'))
+print('Com US${:.2f}, você tem R${:.2f} em 13/04/2026'.format(dinh, (dinh*4.99)))
