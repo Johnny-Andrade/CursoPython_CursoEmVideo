@@ -1,0 +1,2 @@
+frase = input('Digite uma frase: ')
+print('A frase possui a letra A {} vezes, aparecendo pela primeira vez no {}° caractere.\nAlém disso, sua última aparição é no {}° caractere'.format(frase.upper().count('A'), frase.upper().find('A')+1, frase.upper().rfind('A')+1))
