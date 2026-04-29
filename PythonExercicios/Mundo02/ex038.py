@@ -5,4 +5,4 @@ if num1 > num2:
 elif num2 > num1:
     print('{} é menor que {}'.format(num1, num2))
 else:
-    print('{} é igual a {}'.format(num1, num2))
+    print('Os dois valores são iguais'.format(num1, num2))

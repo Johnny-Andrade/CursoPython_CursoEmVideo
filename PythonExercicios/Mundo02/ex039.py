@@ -6,5 +6,7 @@ if idade < 18:
     print('Ainda faltam {} para você precisar se alistar.'.format(18-idade))
 elif idade >45:
     print('Você passou do limite, não pode mais se alistar.')
+elif idade == 18:
+    print('Você precisa se alistar IMEDIATAMENTE!')
 else:
-    print('Você pode se alistar.')
+    print('Você deveria ter se alistado a {} ano(s).'.format(idade-18))
