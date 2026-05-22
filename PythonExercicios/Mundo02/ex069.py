@@ -9,7 +9,7 @@ while True:
         sexo = str(input('\033[31m[ERRO]\033[mDigite o Sexo da pessoa [M/F]: ')).strip().upper()[0]
     if sexo == 'M':
         homens += 1
-    if idade > 18:
+    if idade >= 18:
         adultos += 1
     if sexo == 'F' and idade < 20:
         mulheres += 1
@@ -19,4 +19,4 @@ while True:
     if continuar == 'N':
         break
 print('\nAo todo, tivemos:')
-print(f'{adultos} pessoas com mais de 18 anos.\n{homens} Homens.\n{mulheres} Mulheres com menos de 20 anos.')
+print(f'{adultos} pessoas com 18 anos ou mais.\n{homens} Homens cadastrados.\n{mulheres} Mulheres com menos de 20 anos.')
