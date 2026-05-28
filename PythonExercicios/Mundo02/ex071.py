@@ -3,6 +3,8 @@ print('Eletrônicos Danone')
 print('=='*20)
 cedula50 = cedula20 = cedula10 = cedula01 = 0
 valor = int(input('\nQual valor você quer sacar? R$'))
+while valor <= 0:
+    valor = int(input('\033[31m[ERRO]\033[m Qual valor você quer sacar? R$'))
 while True:
     if valor >= 50:
         cedula50 += 1
