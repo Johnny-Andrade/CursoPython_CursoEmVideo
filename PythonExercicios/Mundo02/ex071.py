@@ -3,20 +3,21 @@ print('Eletrônicos Danone')
 print('=='*20)
 cedula50 = cedula20 = cedula10 = cedula01 = 0
 valor = int(input('\nQual valor você quer sacar? R$'))
-while valor >= 50:
-    cedula50 += 1
-    valor -= 50
-while valor >= 20:
-    cedula20 += 1
-    valor -= 20
-while valor >= 10:
-    cedula10 += 1
-    valor -= 10
-while valor >= 1:
-    cedula01 += 1
-    valor -= 1
-    if valor == 0:
-        break
+while True:
+    if valor >= 50:
+        cedula50 += 1
+        valor -= 50
+    elif valor >= 20:
+        cedula20 += 1
+        valor -= 20
+    elif valor >= 10:
+        cedula10 += 1
+        valor -= 10
+    elif valor >= 1:
+        cedula01 += 1
+        valor -= 1
+        if valor == 0:
+            break
 print('Tivemos um Total de:')
 if cedula50 > 0:
     print(f'{cedula50} cédulas de R$50.00')
