@@ -6,8 +6,10 @@ while True:
         print('Valor adicionado!')
     else:
         print('Valor duplicado. Não adicionado...')
-    conf = str(input('Deseja continuar? [S/N]: ')).strip().upper()[0]
-    if conf == 'N':
+    confirm = str(input('Deseja continuar? [S/N]: ')).strip().upper()[0]
+    while confirm not in 'SN':
+        confirm = str(input('\033[31m[ERRO]\033[m Deseja continuar? [S/N]: ')).strip().upper()[0]
+    if confirm == 'N':
         break
 print('-='*20)
 print(f'Os valores digitados, em ordem crescente, são: {sorted(lista)}')
