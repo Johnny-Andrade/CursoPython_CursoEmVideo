@@ -11,7 +11,4 @@ lista.sort(reverse = True)
 print('-='*20)
 print(f'Você digitou {len(lista)} números!')
 print(f'A lista, de forma decrescente, é: {lista}')
-if 5 in lista:
-    print('O número 5 está presente na lista!')
-else:
-    print('Não há número 5 na lista...')
+print('O número 5 está presente na lista!' if 5 in lista else 'Não há número 5 na lista...')
