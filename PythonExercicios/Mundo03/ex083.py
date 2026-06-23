@@ -1,9 +1,15 @@
 expressao = str(input('Digite a expressão: ')).strip()
-parAberto = expressao.count('(')
-parFechado = expressao.count(')')
-if parAberto == 0 and parFechado == 0:
-    print('Não há parênteses para analisar, reinicie o programa e tente novamente...')
-elif parAberto > parFechado or parFechado > parAberto:
-    print('Expressão inválida!')
+pilha = []
+for simbolo in expressao:
+    if simbolo == '(':
+        pilha.append('(')
+    elif simbolo == ')':
+        if len(pilha) > 0:
+            pilha.pop()
+        else:
+            pilha.append(')')
+            break
+if len(pilha) == 0:
+    print('Expressão Válida!')
 else:
-    print('Expressão válida!')
+    print('Expressão Inválida!')
