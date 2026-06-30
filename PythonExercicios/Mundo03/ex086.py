@@ -10,7 +10,6 @@ for indice in range(0,3):
 for indice in range(0,3):
     linha3.append(int(input(f'Digite um valor para [2, {indice}]: ')))
 print('-='*20)
-[ {matriz[1][0]} ] [ {matriz[1][1]} ] [ {matriz[1][2]} ]
 for indice, item in enumerate(matriz):
     for valor in matriz[indice]:
         print(f'[ {valor} ]', end=' ')
