@@ -1,10 +1,8 @@
 todos = []
 pessoa = list()
-pesados = list()
-magros = list()
 while True:
     pessoa.append(str(input('Nome: ')).strip())
-    peso = int(input('Peso: '))
+    peso = float(input('Peso: '))
     if len(todos) == 0:
         menPeso = maiPeso = peso
     elif peso > maiPeso:
@@ -19,11 +17,13 @@ while True:
         conf = str(input('\033[31m[ERRO]\033[m Quer continuar? [S/N]: ')).strip().upper()[0]
     if conf == 'N':
         break
+print('-='*20)
+print(f'Ao todo, você cadastrou {len(todos)} pessoas')
+print(f'O maior peso foi de {maiPeso}Kg. Que é o peso de ', end='')
 for item in todos:
     if item[0] == maiPeso:
-        pesados.append(item[1])
+        print(f'[{item[1]}] ', end='')
+print(f'\nO menor peso foi de {menPeso}Kg. Que é o peso de ', end='')
+for item in todos:
     if item[0] == menPeso:
-        magros.append(item[1])
-print(f'Ao todo, você cadastrou {len(todos)} pessoas')
-print(f'O maior peso foi de {maiPeso}Kg. Que é o peso de {pesados}')
-print(f'O menor peso foi de {menPeso}Kg. Que é o peso de {magros}')
+        print(f'[{item[1]}] ', end='')
