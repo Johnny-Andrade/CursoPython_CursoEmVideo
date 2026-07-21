@@ -1,8 +1,10 @@
-todos = dict()
-while True:
-    nome = str(input('Digite o nome do aluno: '))
-    media = float(input('Digite a média do aluno: '))
-    if media >= 7:
-        situacao = 'Aprovado'
-    elif media < 6:
-        situacao = 'Reprovado'
+nome = str(input('Nome: '))
+media = float(input(f'Média de {nome}: '))
+if media >= 7:
+    situacao = 'Aprovado'
+else:
+    situacao = 'Reprovado'
+aluno = {'Nome': nome, 'Média': media, 'Situação': situacao}
+print('--'*20)
+for item, valor in aluno.items():
+    print(f'{item} é igual a {valor}')
