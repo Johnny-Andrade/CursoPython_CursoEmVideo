@@ -27,7 +27,7 @@ for indice, item in enumerate(jogadores):
 print('--'*25)
 while True:
     escolha = int(input('Mostrar dados de qual jogador? [999 = FIM]: '))
-    while ((escolha > len(jogadores)) or (escolha < 0)) and escolha != 999:
+    while (0 <= escolha < len(jogadores)) and escolha != 999:
         escolha = int(input('\033[31m[ERRO]\033[m Mostrar dados de qual jogador? [999 = FIM]: '))
     if escolha == 999:
             break
