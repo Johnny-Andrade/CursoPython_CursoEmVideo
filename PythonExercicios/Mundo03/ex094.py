@@ -1,14 +1,12 @@
 idadeMed = 0
-mulheres = list()
 pessoa = dict()
 todos = list()
 while True:
+    pessoa.clear()
     pessoa["Nome"] = str(input('Digite o nome: ')).strip()
     pessoa["Sexo"] = str(input('Sexo: [M/F] ')).strip().upper()[0]
     while pessoa["Sexo"] not in 'FM':
         pessoa["Sexo"] = str(input('\033[31m[ERRO]\033[m Sexo: [M/F] ')).strip().upper()[0]
-    if pessoa["Sexo"] == 'F':
-        mulheres.append(pessoa["Nome"])
     pessoa['Idade'] = int(input('Digite a idade: '))
     idadeMed += pessoa['Idade']
     conf = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
@@ -20,11 +18,15 @@ while True:
         break
 print('-='*20)
 print(f'A) O grupo tem {len(todos)} pessoas.')
-print(f'B) A média de idade é de {idadeMed} anos.')
+print(f'B) A média de idade é de {idadeMed:5.2f} anos.')
 print(f'C) As mulheres cadastradas foram: ', end='')
-for item in mulheres:
-    print(f'{item} ', end='')
-print(f'\nD) Lista das pessoas com idade acima da média: \n')
+for item in todos:
+    if item["Sexo"] == 'F':
+        print(f'{item["Nome"]} ', end='')
+print(f'\nD) Lista das pessoas com idade acima da média:')
 for item in todos:
     if item["Idade"] > idadeMed:
-        print(item)
+        for key, value in item.items():
+            print(f'{key} = {value}', end='; ')
+        print()
+print('<< ENCERRADO >>')
