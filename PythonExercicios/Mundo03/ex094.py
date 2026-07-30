@@ -24,7 +24,7 @@ print(f'B) A média de idade é de {idadeMed} anos.')
 print(f'C) As mulheres cadastradas foram: ', end='')
 for item in mulheres:
     print(f'{item} ', end='')
-print(f'D) Lista das pessoas com idade acima da média: ')
+print(f'\nD) Lista das pessoas com idade acima da média: \n')
 for item in todos:
     if item["Idade"] > idadeMed:
         print(item)
