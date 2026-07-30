@@ -22,10 +22,7 @@ print('-='*30)
 print(f'cod {"nome":<15} {"gols":<15} total')
 print('--'*25)
 for indice, item in enumerate(jogadores):
-    print(f'{indice:>3}',end=' ')
-    print(f'{jogadores[indice]["Nome"]:<15}',end=' ')
-    print(f'{str(jogadores[indice]["NGols"]):<15}',end=' ')
-    print(f'{jogadores[indice]["Total"]}')
+    print(f'{indice:>3} {jogadores[indice]["Nome"]:<15} {str(jogadores[indice]["NGols"]):<15} {jogadores[indice]["Total"]}')
 print('--'*25)
 while True:
     escolha = int(input('Mostrar dados de qual jogador? [999 = FIM]: '))
