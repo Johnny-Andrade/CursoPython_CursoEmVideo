@@ -1,8 +1,10 @@
-totgol = ngol = 0
 jogadores = []
 while True:
+    totgol = ngol = 0
     nome = str(input('Diga o nome do jogador: ')).strip()
     npart = int(input('Quantas partidas ele jogou? '))
+    while npart <= 0:
+        npart = int(input('\033[31m[ERRO]\033[m Quantas partidas ele jogou?'))
     gols = list()
     for p in range(0, npart):
         ngol = int(input(f'Quantos gols {nome} fez no {p+1}° jogo? '))
@@ -27,7 +29,7 @@ for indice, item in enumerate(jogadores):
 print('--'*25)
 while True:
     escolha = int(input('Mostrar dados de qual jogador? [999 = FIM]: '))
-    while (0 < escolha < len(jogadores)) and escolha != 999:
+    while ((0 > escolha) or (escolha >= len(jogadores))) and escolha != 999:
         escolha = int(input('\033[31m[ERRO]\033[m Mostrar dados de qual jogador? [999 = FIM]: '))
     if escolha == 999:
             break
