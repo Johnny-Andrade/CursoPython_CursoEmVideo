@@ -1,4 +1,4 @@
-def contador(*num):
+def contador(*num): #Assim, indicamos que é uma quantia qualquer de valores, e cria-se uma tupla
     for item in num:
         print(item, end=' ')
     print(f'\nNessa tupla, temos {len(num)} valores!')
