@@ -4,33 +4,31 @@ def contagem(ini, fim, pas):
     if pas == 0:
         print('\033[31m[ERRO]\033[m Passo impossível, retornando passo 1')
         pas = 1  
-    if pas < 0:
-            pas *= -1  
+    elif pas < 0:
+        pas *= -1  
     print(f'Contagem de {ini} até {fim} de {pas} em {pas}')
     atual = ini
-    sleep(1)
+    sleep(2)
     if pas < 0:
         pas *= -1
     if fim > ini:
         while atual <= fim:
-            print(f'{atual}', end=' ', flush= True)
+            print(f'{atual}', end=' ', flush = True)
             atual += pas
             sleep(.3)
-        print('FIM!')
-        sleep(1)
-    if ini > fim:
+    else:
         while atual >= fim:
-            print(f'{atual}', end=' ', flush= True)
+            print(f'{atual}', end=' ', flush = True)
             atual -= pas
             sleep(.3)
-        print('FIM!')
-        sleep(1)
+    print('FIM!')
+    sleep(1)
 
 
 contagem(1, 10, 1)
 contagem(10, 0, 2)
 print('-='*20)
-print('Agora é sua vez de personalizar a contagem!')
+print('\nAgora é sua vez de personalizar a contagem!')
 inici = int(input('Início: '))
 final = int(input('Fim:    '))
 passo = int(input('Passo:  '))
