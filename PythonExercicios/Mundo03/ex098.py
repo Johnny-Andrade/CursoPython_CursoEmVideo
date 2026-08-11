@@ -8,6 +8,7 @@ def contagem(ini, fim, pas):
             pas *= -1  
     print(f'Contagem de {ini} até {fim} de {pas} em {pas}')
     atual = ini
+    sleep(1)
     if pas < 0:
         pas *= -1
     if fim > ini:
