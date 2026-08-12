@@ -12,7 +12,7 @@ def maior(*valores):
                 maior = item
         print(item, end=' ', flush = True)
         sleep(.3)
-    print(f'Foram informados {len(valores)} valores ao todo.')
+    print(f'\nForam informados {len(valores)} valores ao todo.')
     print(f'O maior valor informado foi {maior}.')
     sleep(.5)
 
