@@ -13,7 +13,7 @@ def sorteia(lst):
     lst.extend(listaTemp)
 
 
-def sorteiaPar(lista):
+def somaPar(lista):
     soma = 0
     for item in lista:
         if item % 2 == 0:
@@ -23,4 +23,4 @@ def sorteiaPar(lista):
     
 numeros = list()
 sorteia(numeros)
-sorteiaPar(numeros)
+somaPar(numeros)
