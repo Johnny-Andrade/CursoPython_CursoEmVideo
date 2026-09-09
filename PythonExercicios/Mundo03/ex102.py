@@ -6,11 +6,15 @@ def fatorial(num, show = False):
     :return: O valor do Fatorial de um número num.
     '''
     resp = 1
-    for n in range(num, 1, -1):
-        if show == True:
-            print(f'{n} ',end='x ')
+    for n in range(num, 0, -1):
+        if show:
+            print(n, end='')
+            if n > 1:
+                print(f' x ',end='')
+            else:
+                print(' = ',end='')
         resp *=n
-    return print(f'1 = {resp}')
+    return print(f'{resp}')
     
     
 print('--'*20)
