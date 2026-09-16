@@ -1,22 +1,37 @@
-def sistema():
-    while True:
-        print('\033[34;42m')
-        print('~~'*15)
-        print(f'{"SISTEMA DE AJUDA PYHELP":^30}')
-        print('~~'*15)
-        print('\033[m')
-        comando = str(input('Função ou Biblioteca > ')).strip()
-        if comando == 'FIM':
-            print('\033[41m')
-            print('~~'*15)
-            print(f'{"Até logo!":^30}')
-            print('~~'*15)
-            print('\033[m', end='')
-            break
-        else:
-            print('\033[47m')
-            help(comando)
-            print('\033[m', end='')
+from time import sleep
+cores = ('\033[m', # 0 - Sem cor
+         '\033[0;31m', # 1 - vermelho
+         '\033[0;32m', # 2 - verde
+         '\033[0;33m', # 3 - amarelo
+         '\033[0;34m', # 4 - azul
+         '\033[0;35m', # 5 - roxo
+         '\033[7;37m', # 6 - branco
+         )
+def ajuda(comando):
+    título(f"Acessando o manual do comando \'{comando}\'", 1)
+    print(cores[6], end='')
+    help(comando)
+    print(cores[0], end='')
+    sleep(2)
     
     
-sistema()
+def título(msg, cor=0):
+    tam = len(msg)+4
+    print(cores[cor], end='')
+    print('~'*tam)
+    print(f'  {msg}')
+    print('~'*tam)
+    print(cores[0], end='')
+    sleep(1)
+   
+    
+# Programa Principal
+comando = ''
+while True:
+    título('SISTEMA DE AJUDA PyHELP',4)
+    comando = str(input("Função ou Biblioteca > "))
+    if comando.upper() == 'FIM':
+        break
+    else:
+        ajuda(comando)
+título('ATÉ LOGO!',5)

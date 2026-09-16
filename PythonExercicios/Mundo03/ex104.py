@@ -1,12 +1,12 @@
 def leiaInt(txt):
-    num = input(txt)
     while True:
-        if num in '0123456789' and len(num) >= 1:
+        num = str(input(txt)).strip()
+        if num.isnumeric():
+            valor = int(num)
             break
         else:
-            print('\033[31m[ERRO] Digite um número inteiro válido.\033[m')
-            num = input(txt)
-    return num
+            print('\033[0;31m[ERRO] Digite um número inteiro válido.\033[m')
+    return valor
 
 
 n = leiaInt('Digite um número: ')
