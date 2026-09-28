@@ -1,31 +1,27 @@
 def aumentar(n, perc = 10, form = False):
     perc = (perc/100)+1
-    if form == True:
-        return f'R${n*perc:.2f}'
-    return n*perc
+    res = n*perc
+    return res if not form else moeda(n*perc)
     
 
 def diminuir(n, perc = 10, form = False):
     perc = 1-(perc/100)
-    if form == True:
-        return f'R${n*perc:.2f}'
-    return n*perc
+    res = n*perc
+    return res if not form else moeda(res)
     
 
 def dobro(n, form = False):
-    if form == True:
-        return f'R${n*2:.2f}'
-    return n*2
+    res = n*2
+    return res if not form else moeda(res)
 
 
 def metade(n, form = False):
-    if form == True:
-        return f'R${n/2:.2f}'
-    return n/2
+    res =  n/2
+    return res if not form else moeda(res)
 
 
-def moeda(n):
-    return f'R${n:.2f}'
+def moeda(n, moeda='R$'):
+    return f'{moeda}{n:.2f}'.replace('.',',')
 
 
 def resumo(n, aum=10, redu=10):
