@@ -25,13 +25,13 @@ def moeda(n, moeda='R$'):
 
 
 def resumo(n, aum=10, redu=10):
-    print('--'*15)
-    print(f'{"RESUMO DO VALOR":^30}')
-    print('--'*15)
-    print(f'Preço analisado: {moeda(n):>10}')
-    print(f'Dobro do preço: {dobro(n, True):>10}')
-    print(f'Metade do preço: {metade(n, True):>10}')
-    print(f'{aum}% de aumento: {aumentar(n, aum, True):>10}')
-    print(f'{redu}% de redução: {diminuir(n, redu, True):>10}')
-    print('--'*15)
+    print('-'*36)
+    print('RESUMO DO VALOR'.center(36))
+    print('-'*36)
+    print(f'Preço analisado: \t{moeda(n)}')
+    print(f'Dobro do preço: \t{dobro(n, True)}')
+    print(f'Metade do preço: \t{metade(n, True)}')
+    print(f'{aum}% de aumento: \t{aumentar(n, aum, True)}')
+    print(f'{redu}% de redução: \t{diminuir(n, redu, True)}')
+    print('-'*36)
 
