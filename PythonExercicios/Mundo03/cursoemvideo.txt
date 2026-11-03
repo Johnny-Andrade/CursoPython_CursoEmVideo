@@ -1,0 +1,6 @@
+Cleberson;41
+Everson;64
+Jefferson;23
+Johnson;45
+Cleitson;13
+Sonson;9

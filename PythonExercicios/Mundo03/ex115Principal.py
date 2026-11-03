@@ -1,12 +1,16 @@
-from ex115 import menu
+from ex115.menu import *
+from ex115.dados import *
 from time import sleep
+arq = 'cursoemvideo.txt'
+if not arquivoExiste(arq):
+    criarArquivo(arq)
 while True:
-    resposta = menu.interface(['Ver pessoas cadastradas','Cadastrar nova pessoa','Sair do Sistema'])
+    resposta = interface(['Ver pessoas cadastradas','Cadastrar nova pessoa','Sair do Sistema'])
     if resposta == 1:
-        menu.cabeçalho('opção 1')
+        lerArquivo(arq)
     elif resposta == 2:
-        menu.cabeçalho('opção 2')
+        cabeçalho('CADASTRANDO UMA PESSOA')
     elif resposta == 3:
-        menu.cabeçalho('Saindo do programa...')
+        cabeçalho('SAINDO DO PROGRAMA...')
         break
 print('Volte sempre!')
