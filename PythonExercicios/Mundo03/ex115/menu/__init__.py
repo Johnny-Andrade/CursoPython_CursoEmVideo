@@ -1,8 +1,8 @@
-def linha(tam = 30):
+def linha(tam = 40):
     return print('-'*tam)
 
 
-def cabeçalho(txt, tam = 30):
+def cabeçalho(txt, tam = 40):
     linha()
     print(txt.center(tam))
     linha()

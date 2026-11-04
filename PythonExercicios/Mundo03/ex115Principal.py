@@ -8,8 +8,12 @@ while True:
     resposta = interface(['Ver pessoas cadastradas','Cadastrar nova pessoa','Sair do Sistema'])
     if resposta == 1:
         lerArquivo(arq)
+        sleep(1)
     elif resposta == 2:
-        cabeçalho('CADASTRANDO UMA PESSOA')
+        cabeçalho('NOVO CADASTRO')
+        nome = str(input('Nome: '))
+        idade = leiaInt('Idade: ')
+        cadastrar(arq, nome, idade)
     elif resposta == 3:
         cabeçalho('SAINDO DO PROGRAMA...')
         break
